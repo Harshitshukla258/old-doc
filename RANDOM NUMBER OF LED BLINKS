@@ -1,0 +1,26 @@
+DATE:15/9/19
+// RANDOM NUMBER OF LED BLINKS
+void setup()
+{
+  for(int i=7;i<14;i++)
+  {
+  pinMode(i, OUTPUT);
+  }
+}
+
+void loop()
+{
+  int r;
+  r=random(7,14);
+  delay(100);
+  for(int j=7;j<=r;j++)
+  {
+  digitalWrite(j, HIGH);
+  }
+  delay(1000); 
+  for(int j=7;j<=r;j++)
+  {
+  digitalWrite(j, LOW);
+  } 
+  delay(1000); // Wait for 1000 millisecond(s)
+}
